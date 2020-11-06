@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  timer:
+    build: .
+    restart: on-failure
+    env_file:
+      - config.env
+    volumes:
+      - ./timer.session:/Timer/timer.session
+
+
