@@ -33,8 +33,8 @@ async def send_message():
         await client.send_message(entity, message)
 
 
-scheduler.add_job(send_message, 'cron', hour='08', minute="12")
-scheduler.add_job(send_message, 'interval', seconds=10)
+scheduler.add_job(send_message, 'cron', hour='22', minute="30")
+# scheduler.add_job(send_message, 'interval', seconds=10)
 scheduler.start()
 
 if __name__ == '__main__':
