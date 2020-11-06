@@ -34,7 +34,7 @@ async def send_message():
 
 
 scheduler.add_job(send_message, 'cron', hour='08', minute="12")
-scheduler.add_job(send_message, 'interval', seconds="10")
+scheduler.add_job(send_message, 'interval', seconds=10)
 scheduler.start()
 
 if __name__ == '__main__':
